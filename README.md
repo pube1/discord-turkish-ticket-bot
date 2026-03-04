@@ -4,94 +4,97 @@
   <br />
     <img src="https://i.imgur.com/bvxcjXH.png" width="150" alt="Ticket Bot" />
   <br />
-  <h1>🎫 Gelişmiş Discord Ticket & Sunucu Yönetim Botu</h1>
+  <h1>🎫 Advanced Discord Ticket & Server Management Bot</h1>
   <p>
-    Profesyonel, hızlı ve tamamen optimize edilmiş Discord JS v14 destekli bilet ve yönetim botu.
+    A professional, fast, and fully optimized ticket and management bot powered by Discord.js v14.
   </p>
 </div>
 
 <details>
-  <summary>Tablo İçeriği</summary>
+  <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#hakkında">Hakkında</a></li>
-    <li><a href="#özellikler">Özellikler</a></li>
-    <li><a href="#kurulum">Kurulum ve Başlangıç</a></li>
-    <li><a href="#komutlar">Komutlar</a></li>
-    <li><a href="#teknolojiler">Teknolojiler</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#installation">Installation and Setup</a></li>
+    <li><a href="#commands">Commands</a></li>
+    <li><a href="#technologies">Technologies</a></li>
   </ol>
 </details>
 
-## 🚀 Hakkında
+## 🚀 About
 
-Bu proje, bir Discord sunucusunun teknik destek ekibinin yönetimini kolaylaştırmak, tüm olayları loglamak ve anlık oyun sunucusu durumunu takip etmek için özel olarak geliştirilmiştir. **Discord.js v14** ve en yeni **Node.js** teknolojileri kullanılarak yazılmıştır. 
+This project is specially developed to facilitate the management of a Discord server's technical support team, log all events, and track the instant game server status. It is written using **Discord.js v14** and the latest **Node.js** technologies. 
 
-"Ghost-ticket" (hayalet bilet) koruması, asenkron transcript kapanış algoritması ve 3 dakikada bir otomatik RAM >> Disk önbellekleme (Cache) sistemi gibi gelişmiş mühendislik optimizasyonlarına sahiptir.
+It features advanced engineering optimizations such as "ghost-ticket" protection, asynchronous transcript closing algorithm, and automatic RAM >> Disk caching system every 3 minutes.
 
-## ✨ Özellikler
+## ✨ Features
 
-* **Gelişmiş Bilet Sistemi:** Butonlu onaylama, "Ticketi Devral" butonu ve gelişmiş bilet yönetim arayüzü (Kullanıcı ekle/çıkar/devret).
-* **HTML Transcript (Döküm):** Bilet kapatıldığında konuşma geçmişini şık bir web sayfası `(.html)` olarak özel log kanalına ve bileti açan kullanıcının DM kutusuna gönderir.
-* **Yetkili Liderlik Tablosu (Toplist):** En çok ticket çözen yetkilileri Günlük, Haftalık ve Tüm Zamanlar periyotlarında `rank` sistemiyle listeler. Kayıtları tutar.
-* **Dinamik Profil (Gamedig):** Oyun sunucusuna sorgu atarak (60 saniyede bir Cache'e alır) botun "Oynuyor" kısmında animasyonlu olarak 10 saniyede bir değişen "Aktif Oyuncu (Örn: 30/128)", "Site Adresi" ve "Slogan" yansıtır.
-* **Güvenlik Logları:** Banlanan ve atılan (Kick) üyeleri nedenleriyle birlikte özel sunucu log kanallarına tespit edip atar.
-* **Genel Log Sistemi:** Sunucuya katılan/ayrılanlar, silinen mesajlar ve ses kanalına giren/çıkan tüm kullanıcı hareketleri farklı kanallarda detaylıca loglanır.
-* **Ses Kanalı Entegrasyonu:** Yöneticiler `/ses` komutu ile botu istedikleri bir ses kanalına sokabilirler (Bot odada aktif şekilde 7/24 kalır).
-* **Numaratör Yönetimi:** Açılacak biletlerin başlıklarındaki numara sayı dizisi (Örn: `ticket-0100`) panelden yönetilebilir.
+* **Advanced Ticket System:** Button approvals, "Claim Ticket" button, and an advanced ticket management interface (Add/Remove/Transfer User).
+* **HTML Transcripts:** When a ticket is closed, it sends the conversation history as a stylish web page `(.html)` to a dedicated log channel and the DM inbox of the user who opened the ticket.
+* **Staff Leaderboard (Toplist):** Lists the staff members who solved the most tickets with a `rank` system in Daily, Weekly, and All-Time periods.
+* **Dynamic Profile (Gamedig):** By querying the game server (caches every 60 seconds), it reflects the "Active Players (e.g., 30/128)", "Site Name", and "Slogan" changing every 10 seconds in the bot's "Playing" activity.
+* **Security Logs:** Detects banned and kicked members along with their reasons and sends them to specific server log channels.
+* **General Log System:** All user actions like joining/leaving the server, deleted messages, and joining/leaving voice channels are logged in detail in different channels.
+* **Voice Channel Integration:** Administrators can make the bot join a specific voice channel using the `/voice` command (The bot stays active in the room 24/7).
+* **Counter Management:** The number sequence in the titles of tickets to be opened (e.g., `ticket-0100`) can be managed from the panel.
 
-## 💻 Kurulum
+## 💻 Installation
 
-Projenin kendi bilgisayarınızda veya VDS sunucularında 7/24 çalıştırılması çok kolaydır.
+It is very easy to run the project 24/7 on your own computer or VDS servers.
 
-### Gereksinimler
-- Node.js (v18.x veya daha üstü)
-- Discord Bot Tokeni ve Client ID (Discord Developer Portal'dan alınır)
-- Sunucuda `Message Content`, `Server Members` ve `Presence` intentlerinin açık olması.
+### Requirements
+- Node.js (v18.x or higher)
+- Discord Bot Token and Client ID (Obtained from the Discord Developer Portal)
+- `Message Content`, `Server Members`, and `Presence` intents must be enabled on the server.
 
-### Kurulum Adımları
+### Installation Steps
 
-1. Repoyu bilgisayarınıza/VDS'e klonlayın veya indirin.
-2. Klasörün içinde bir terminal (`cmd` veya `powershell`) açın.
-3. Gerekli kütüphaneleri yüklemek için aşağıdaki komutu girin:
+1. Clone or download the repository to your computer/VDS.
+2. Open a terminal (`cmd` or `powershell`) inside the folder.
+3. Enter the following command to install the required libraries:
    ```bash
    npm install
    ```
-4. Klasör içerisindeki `.env` dosyasını bir metin editörüyle açın ve kendi bilgilerinizi girin:
+4. Open the `.env` file in the folder with a text editor and enter your credentials and server configurations:
    ```env
-   DISCORD_TOKEN=SizinBotTokeninizBuraya
-   DISCORD_CLIENT_ID=SizinBotİdNumaranızBuraya
+   DISCORD_TOKEN=YourBotTokenHere
+   DISCORD_CLIENT_ID=YourBotClientIdHere
+   SERVER_IP=127.0.0.1
+   SERVER_PORT=27015
    ```
-5. Botu başlatın!
+   *(Replace the IP and Port with your actual game server details)*
+5. Start the bot!
    ```bash
-   npm start
+   node index.js
    ```
 
-## 🛠️ Komutlar
+## 🛠️ Commands
 
-Bot tamamen modern `Slash (/)` komut altyapısı üzerine inşa edilmiştir.
+The bot is entirely built on a modern `Slash (/)` command infrastructure.
 
-### Yönetici Komutları 👑
-* `/kurulum`: Destek sistemini kurar ve buton panelini gönderir. *(Zorunlu ayarlar: Panel Kanalı, Yetkili Rolü, Transcript Log Kanalı, Bilet Kategorisi)*
-* `/log_kurulum`: Ban ve Kick loglarının gideceği kanalları ayarlar.
-* `/genel_log_kurulum`: Mod/Genel log kanallarını ayarlar *(Giriş-Çıkış, Mesaj-Silinme, Ses-Log)*.
-* `/numarator`: Bir dahaki açılacak bilet numarasının sayısını belirler.
-* `/ses`: Botun katılacağı Discord ses kanalını belirler.
-* `/aktif`: Oyun sunucusunun açıldığını IP adresi ile `@everyone` atarak bildirir.
-* `/bakim`: Oyun sunucusunun bakıma alındığını `@everyone` atarak bildirir.
+### Administrator Commands 👑
+* `/setup`: Sets up the support system and sends the button panel. *(Required settings: Panel Channel, Staff Role, Transcript Log Channel, Ticket Category)*
+* `/log_setup`: Sets up the channels for Ban and Kick logs.
+* `/general_log_setup`: Sets up Mod/General log channels *(Join-Leave, Message-Delete, Voice-Log)*.
+* `/counter`: Sets the starting number for the next ticket to be opened.
+* `/voice`: Sets the Discord voice channel the bot will join.
+* `/active`: Announces that the game server is open with its IP address by tagging `@everyone`.
+* `/maintenance`: Announces that the game server is under maintenance by tagging `@everyone`.
 
-### Yetkili (Destek) Komutları 🛡️
-* `/toplist`: Yetkililerin en çok bilet çözme sıralamasını gösterir *(Günlük, Haftalık, Tüm Zamanlar)*.
-* `/ekle <kullanici>`: Seçilen kullanıcıyı bilete dahil eder.
-* `/cikar <kullanici>`: Seçilen kullanıcıyı bilet yetkisinden men eder.
-* `/devret <yetkili>`: Mevcut destek biletini başka bir yetkiliye transfer eder.
-* `/kapat`: Güvenli bir şekilde HTML transcript oluşturarak bileti sonlandırır ve siler.
+### Staff (Support) Commands 🛡️
+* `/toplist`: Shows the staff's ranking for solving the most tickets *(Daily, Weekly, All Time)*.
+* `/add <user>`: Adds the selected user to the ticket.
+* `/remove <user>`: Removes the selected user's authorization from the ticket.
+* `/transfer <staff>`: Transfers the current support ticket to another staff member.
+* `/close`: Safely ends and deletes the ticket by generating an HTML transcript.
 
-## ⚙️ Teknolojiler
-* **[Discord.js v14](https://discord.js.org/)** - Güçlü API Sarmalayıcı
-* **[Gamedig](https://www.npmjs.com/package/gamedig)** - Sunucu Query/Sorgu Altyapısı
-* **[Discord-html-transcripts](https://www.npmjs.com/package/discord-html-transcripts)** - Mükemmel döküm arayüzü arşivi
-* **[@discordjs/voice](https://www.npmjs.com/package/@discordjs/voice)** - Pürüzsüz ses kanalı aktivasyonu
+## ⚙️ Technologies
+* **[Discord.js v14](https://discord.js.org/)** - Powerful API Wrapper
+* **[Gamedig](https://www.npmjs.com/package/gamedig)** - Server Query Infrastructure
+* **[Discord-html-transcripts](https://www.npmjs.com/package/discord-html-transcripts)** - Excellent transcript archive interface
+* **[@discordjs/voice](https://www.npmjs.com/package/@discordjs/voice)** - Smooth voice channel activation
 
 <br />
 <div align="center">
-  <i>Bu proje, optimize edilmiş asenkron kod yapısıyla hiçbir darboğaz yaşamadan binlerce bilet isteğini eşzamanlı olarak yanıtlayabilecek düzeyde tasarlanmıştır. 🚀</i>
+  <i>This project is designed to handle thousands of ticket requests simultaneously without any bottlenecks with its optimized asynchronous code structure. 🚀</i>
 </div>
